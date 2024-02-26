@@ -1,0 +1,150 @@
+/* Home.css */
+
+.Home {
+  text-align: center;
+}
+
+.red-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: red;
+  height: 50px;
+}
+
+.red-header h1 {
+  margin: 0;
+  text-align: center;
+  flex-grow: 180;
+  /* ทำให้ <h1> ขยายตามพื้นที่ที่เหลือ (2 เท่าของข้อความปกติ) */
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons a {
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.header-icons .fa-icon {
+  font-size: 28px;
+  /* ปรับขนาดไอคอนตามที่ต้องการ */
+}
+
+.spacer {
+  flex-grow: 1;
+  /* ทำให้ Spacer ขยายตามพื้นที่ที่เหลือ */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  /* ปิด Navbar ไว้ด้านซ้าย */
+  width: 250px;
+  height: 100%;
+  background-color: red;
+  padding-top: 60px;
+  transition: left 0.3s ease-in-out;
+}
+
+.nav-open {
+  left: 0;
+  /* เปิด Navbar ไปทางขวา */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin-bottom: 15px;
+  background-color: white;
+  /* เพิ่มสีพื้นหลังเป็นสีขาว */
+  padding: 10px;
+  border-radius: 5px;
+  /* เพิ่มขอบมนไปที่รายการเมนู */
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  /* เพิ่มสีข้อความเป็นสีดำ */
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  font-size: 24px;
+  /* ปรับขนาดของ ☰ ตามต้องการ */
+}
+
+.add-product-modal {
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  /* Set a higher z-index to make sure it appears on top of other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  padding-left: 50px;
+    padding-top: 30px;
+}
+
+.product-card {
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h2 {
+  color: red;
+}
+
+.product-image-input {
+  width: 100%;
+  /* or any other size */
+  height: auto;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.logo-image {
+  width: 150px;
+  /* adjust as needed */
+}
+
+.product-name,
+.product-description {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.color-text {
+  color: rgb(231, 231, 231);
+}
