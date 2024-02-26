@@ -1,0 +1,44 @@
+.container-Makepayment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .center-image-Makepayment {
+    width: 100%;
+    margin-right: 2em; /* Adjust as needed */
+    display: block;
+    
+  }
+  
+  .description-Makepayment {
+    flex-grow: 1;
+  }
+  .center-text-red-Makepayment {
+    color: red;
+  }
+  .parent-container-Makepayment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .description-Makepayment-ChooseFile {
+    text-align: right;
+    margin-left: 20%; 
+  }
+
+  .description-Makepayment-ChooseFile button {
+    font-size: 20px; /* Adjust this value as needed */
+    background-color: green;
+    color: white;
+    padding: 10px 10px; /* Adjust this value as needed */
+}
+.button-left {
+    margin-right: 110px;
+    margin-top: 30px;
+}
+.color-text {
+  color: rgb(231, 231, 231);
+}
