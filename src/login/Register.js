@@ -10,6 +10,7 @@ const Register = () => {
   const [address, setAddress] = useState('');
   const [phonenumber, setPhonenumber] = useState('');
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -69,12 +70,20 @@ const Register = () => {
               className="input-field"
             />
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input-field"
             />
+            <label>
+              <input
+                type="checkbox"
+                checked={showPassword}
+                onChange={(e) => setShowPassword(e.target.checked)}
+              />
+              Show Password
+            </label>
             <input
               type="text"
               placeholder="First Name"
