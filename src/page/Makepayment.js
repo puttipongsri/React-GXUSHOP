@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import './Makepayment.css';
@@ -9,6 +9,7 @@ const Makepayment = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const user = {}; // Replace with actual user data
   const [isFileUploaded, setFileUploaded] = useState(false); 
+  const navigate = useNavigate();
 
   const handleImageUpload = (event) => {
     if (event.target.files && event.target.files[0]) {
@@ -29,6 +30,7 @@ const Makepayment = () => {
       // TODO: Send the data to the server
       console.log('Sending data to the server...');
       alert('รอการตรวจสอบชำระเงิน');
+      navigate('/Home');
     }
   }
 
@@ -110,7 +112,7 @@ const Makepayment = () => {
       <p>{product && product.description8}</p>
       <p>{product && product.description9}</p>
       <p>{product && product.description10}</p>
-      <h1 className="center-text-red-Makepayment">${product && product.price}</h1>
+      <h1 className="center-text-red-Makepayment">฿{product && product.price}</h1>
       </div>
       <div className="description-Makepayment-ChooseFile">
       <input type="file" accept="image/*" onChange={handleImageUpload} />
