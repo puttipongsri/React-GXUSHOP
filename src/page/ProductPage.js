@@ -80,27 +80,27 @@ function ProductPage() {
       </nav>
       <br /><br /><br /><br />
       <div className="product-header" style={{ display: 'flex', alignItems: 'center' }}>
-  <img src={product.image} alt={product.name} className="product-image-productpage margin-left" />
-  <div style={{ marginLeft: '20px' }}>
-    <h1 className="product-name-productpage margin-left-name">{product.name}</h1>
-    <hr style={{ width: 'auto', margin: '0 auto' }} />
-    <p className="product-name-productpage margin-left-name product-description-productpage">{product.description}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description2}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description3}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description4}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description5}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description6}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description7}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description8}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description9}</p>
-<p className="product-name-productpage margin-left-name product-description-productpage">{product.description10}</p>
-<hr style={{ width: 'auto', margin: '0 auto' }} />
-<h1 className="product-price product-name-productpage margin-left-name" style={{ color: 'red' }}>${product.price}</h1>
-<button className="green-button" onClick={() => handleOrder(product)}>
-  <Link to="/makepayment" style={{ color: 'white', textDecoration: 'none' }}>สั่งซื้อ</Link>
-</button>
-  </div>
-</div>
+        <img src={product.image} alt={product.name} className="product-image-productpage margin-left" />
+        <div style={{ marginLeft: '20px' }}>
+          <h1 className="product-name-productpage margin-left-name">{product.name}</h1>
+          <hr style={{ width: 'auto', margin: '0 auto' }} />
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description2}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description3}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description4}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description5}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description6}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description7}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description8}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description9}</p>
+          <p className="product-name-productpage margin-left-name product-description-productpage">{product.description10}</p>
+          <hr style={{ width: 'auto', margin: '0 auto' }} />
+          <h1 className="product-price product-name-productpage margin-left-name" style={{ color: 'red' }}>฿{product.price}</h1>
+          <button className="green-button" onClick={() => handleOrder(product)}>
+            <Link to="/makepayment" style={{ color: 'white', textDecoration: 'none' }}>สั่งซื้อ</Link>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
