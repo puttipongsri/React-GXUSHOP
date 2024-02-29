@@ -101,7 +101,7 @@ function Home() {
               <h3>{truncate(product.name, 35)}</h3>
             </Link>
             <p>{truncate(product.description, 50)},{truncate(product.description3, 50)}</p>
-            <h2 className="price">${product.price}</h2>
+            <h2 className="price">฿{product.price}</h2>
           </div>
         ))}
         {randomProducts.setcommoniter.map((product, index) => (
@@ -112,7 +112,7 @@ function Home() {
               <h3>{truncate(product.name, 35)}</h3>
             </Link>
             <p>{truncate(product.description, 50)},{truncate(product.description3, 50)}</p>
-            <h2 className="price">${product.price}</h2>
+            <h2 className="price">฿{product.price}</h2>
           </div>
         ))}
         {randomProducts.fullset.map((product, index) => (
@@ -123,7 +123,7 @@ function Home() {
               <h3>{truncate(product.name, 35)}</h3>
             </Link>
             <p>{truncate(product.description, 50)},{truncate(product.description3, 50)}</p>
-            <h2 className="price">${product.price}</h2>
+            <h2 className="price">฿{product.price}</h2>
           </div>
         ))}
       </div>
