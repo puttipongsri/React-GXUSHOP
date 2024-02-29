@@ -146,7 +146,7 @@ function Setcom() {
               </Link>
             </h3>
             <p className="product-description">{truncate(product.description, 50)},{truncate(product.description3, 50)}</p>
-            <h2>${product.price}</h2>
+            <h2>฿{product.price}</h2>
           </div>
         ))}
       </div>
