@@ -45,9 +45,11 @@ const Account = () => {
   }, [isNavVisible, navigate]);
 
   const handleLogout = () => {
-    // Remove user data from localStorage and redirect to login page
-    localStorage.removeItem('user');
-    navigate('/login');
+    if (window.confirm("Do you really want to logout?")) {
+      // Remove user data from localStorage and redirect to login page
+      localStorage.removeItem('user');
+      navigate('/login');
+    }
   }
 
   return (
