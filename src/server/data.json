@@ -1,22 +1,30 @@
 {
   "users": [
     {
-      "id": "abc6",
+      "id": "A01",
       "username": "bank",
-      "password": "123",
-      "firstName": "puttipong",
-      "lastName": "srisaard",
-      "address": "99/99 dsafmasklfmklsdafmklsdmfkl",
-      "phonenumber": "0999999999"
+      "password": "000",
+      "role": "admin"
     },
     {
-      "id": "b11c",
+      "id": "ed83",
+      "username": "bank",
+      "password": "123",
+      "firstName": "a",
+      "lastName": "a",
+      "address": "a",
+      "phonenumber": "0",
+      "role": "user"
+    },
+    {
+      "id": "c02d",
       "username": "a",
       "password": "a",
       "firstName": "a",
       "lastName": "a",
       "address": "a",
-      "phonenumber": "556555"
+      "phonenumber": "0",
+      "role": "user"
     }
   ],
   "setcom": [
@@ -29,7 +37,7 @@
       "description4": " RAM : 16GB DDR5 5200MHz",
       "description5": "SSD : M.2 NM620 256GB",
       "description6": "PSU : GIGABYTEP650B 650W(80+ BRONZE)",
-      "description7": "SSD : CASE : DARKFLASH DK300 (BLACK)",
+      "description7": "CASE : DARKFLASH DK300 (BLACK)",
       "price": "16400",
       "image": "https://cdn.discordapp.com/attachments/1062376070390743123/1210610532894122024/Blue__Yellow_Minimalist_Laptop_Sale_Instagram_Post_Template.jpg?ex=65eb2feb&is=65d8baeb&hm=1f0810d24fd633166ca5e0add13cad5dab8697d8ecfd10677cdd03c3ca4afb21&"
     },
