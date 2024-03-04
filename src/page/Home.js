@@ -2,14 +2,12 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import data from '../server/data.json';
 
 import './Home.css';
 
 function Home() {
-  const location = useLocation();
-  const user = location.state;
+  const user = localStorage.getItem('user');
   const [isNavVisible, setNavVisible] = useState(false);
   const [randomProducts, setRandomProducts] = useState({ setcom: [], setcommoniter: [], fullset: [] });
 
