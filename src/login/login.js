@@ -24,7 +24,7 @@ const Login = () => {
           localStorage.setItem('user', JSON.stringify(user));
   
           // ทำการล็อคอินเสร็จแล้วไปที่หน้า Home และส่งข้อมูลผู้ใช้ไปที่หน้า Account
-          navigate('/Home', { state: user });
+          navigate('/Home', { state: { user } });
         } else {
           alert('ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง');
         }
