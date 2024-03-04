@@ -26,7 +26,8 @@ const Register = () => {
       firstName: firstName,
       lastName: lastName,
       address: address,
-      phonenumber: phonenumber
+      phonenumber: phonenumber,
+      role: 'user' // Add the role here
     };
 
     try {
@@ -40,7 +41,7 @@ const Register = () => {
 
       if (response.ok) {
         alert('Registration successful');
-        window.location.href = '/'; // Redirect to login page upon successful registration
+        window.location.href = '/login'; // Redirect to login page upon successful registration
       } else {
         const errorMessage = await response.json();
         setError(errorMessage.message);
@@ -115,7 +116,7 @@ const Register = () => {
             />
           </div>
           {error && <p className="error-text">{error}</p>}
-          <Link to="/" className="BacktoLogin-link">Back to Login</Link>
+          <Link to="/login" className="BacktoLogin-link">Back to Login</Link>
           <button type="submit" className="register-button">Register</button>
         </form>
       </div>
