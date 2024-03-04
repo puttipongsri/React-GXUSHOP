@@ -24,10 +24,8 @@ function Fullset() {
   const [products, setProducts] = useState([]);
   const userString = localStorage.getItem('user');
   const user = userString ? JSON.parse(userString) : null;
-  
-  // Now you can check the user role
   const isAdmin = user && user.role === 'admin';
-  console.log(user.role);
+
 
   const toggleNav = () => {
     setNavVisible(!isNavVisible);
