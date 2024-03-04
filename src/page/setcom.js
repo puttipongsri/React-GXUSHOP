@@ -2,13 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { useLocation } from 'react-router-dom';
 import './setcom.css';
 
 
 function Setcom() {
-  const location = useLocation();
-  const user = location.state;
   const [isNavVisible, setNavVisible] = useState(false);
   const [showAddProductModal, setShowAddProductModal] = useState(false);
   const [productName, setProductName] = useState('');
@@ -22,14 +19,21 @@ function Setcom() {
   const [productPrice, setProductPrice] = useState('');
   const [productImage, setProductImage] = useState('');
   const [products, setProducts] = useState([]);
+  const userString = localStorage.getItem('user');
+  const user = userString ? JSON.parse(userString) : null;
+  const isAdmin = user && user.role === 'admin';
 
 
   const toggleNav = () => {
     setNavVisible(!isNavVisible);
   };
+  
 
   const toggleAddProductModal = () => {
-    setShowAddProductModal(!showAddProductModal);
+    // ถ้าเป็น admin ให้แสดง Modal
+    if (isAdmin) {
+      setShowAddProductModal(!showAddProductModal);
+    }
   };
 
   const handleAddProduct = () => {
@@ -164,9 +168,11 @@ function Setcom() {
           <li>
             <Link to="/fullset">Fullset</Link>
           </li>
-          <li>
-            <button onClick={toggleAddProductModal}>Add Product</button>
-          </li>
+          {isAdmin && (
+            <li>
+              <button onClick={toggleAddProductModal}>Add Product</button>
+            </li>
+          )}
           <p className="color-text">sri.puttipong@gmail.com</p>
           <p className="color-text">Facebook : Bank Puttipong</p>
           <p className="color-text">Instagram : bankk.p</p>
